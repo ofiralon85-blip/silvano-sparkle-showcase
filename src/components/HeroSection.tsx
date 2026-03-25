@@ -1,10 +1,23 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import heroImg from "@/assets/hero-jewelry.jpg";
 
 const HeroSection = () => {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 0.8], [0.3, 0.7]);
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      <div className="absolute inset-0">
+    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      <motion.div className="absolute inset-0" style={{ y: imageY, scale: imageScale }}>
         <img
           src={heroImg}
           alt="תכשיטי כסף סילבנו - שרשראות, טבעות וצמידים"
@@ -12,10 +25,16 @@ const HeroSection = () => {
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/80" />
-      </div>
+      </motion.div>
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/80"
+        style={{ opacity: overlayOpacity }}
+      />
 
-      <div className="relative z-10 text-center px-6 max-w-3xl mx-auto mt-20">
+      <motion.div
+        className="relative z-10 text-center px-6 max-w-3xl mx-auto mt-20"
+        style={{ y: textY, opacity: textOpacity }}
+      >
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,15 +73,20 @@ const HeroSection = () => {
         >
           הצטרפי למועדון
         </motion.a>
-      </div>
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1.5 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        style={{ opacity: textOpacity }}
       >
-        <div className="w-px h-20 bg-gradient-to-b from-transparent via-silver to-transparent" />
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+          className="w-px h-20 bg-gradient-to-b from-transparent via-silver to-transparent"
+        />
       </motion.div>
     </section>
   );
