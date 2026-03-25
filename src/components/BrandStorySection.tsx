@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import craftsmanship from "@/assets/craftsmanship.jpg";
+import crystals from "@/assets/crystals.jpg";
+import lifestyleWoman from "@/assets/lifestyle-woman.jpg";
 
 const BrandStorySection = () => {
   return (
@@ -17,20 +18,22 @@ const BrandStorySection = () => {
           <h2 className="font-display text-4xl md:text-5xl font-light text-foreground mb-10 leading-[1.15]">
             עבודת יד עדינה,
             <br />
-            <span className="text-silver-dark italic">כסף אמיתי</span>
+            <span className="text-silver-dark italic">אבנים עם משמעות</span>
           </h2>
           <div className="space-y-6 text-muted-foreground font-body text-sm leading-[1.9]">
             <p>
               סילבנו תכשיטים נולד מתוך אהבה עמוקה לאומנות ולעיצוב. כל תכשיט
-              שלנו נוצר בעבודת יד קפדנית מכסף 925, עם תשומת לב לכל פרט ופרט.
+              שלנו נוצר בעבודת יד קפדנית עם אבנים טבעיות — כל אבן נבחרה
+              בקפידה לפי המשמעות והאנרגיה שלה.
             </p>
             <p>
-              אנחנו מאמינים שתכשיט הוא לא רק אקססורי — הוא חלק מהזהות שלך.
-              כל עיצוב נולד מתוך השראה עירונית, מודרנית ועכשווית.
+              מאמתיסט לרוגע, טורקיז להגנה, אקוומרין לאומץ — אצלנו כל תכשיט
+              מגיע עם כרטיס משמעות אישי. לא סתם תכשיטים, אלא אנרגיה שאת
+              לובשת.
             </p>
             <p>
               בואי לגלות את הקולקציה שלנו בדוכן בקניון עזריאלי תל אביב,
-              ולמצוא את הפריט שמדבר אלייך.
+              ולמצוא את האבן שמדברת אלייך.
             </p>
           </div>
         </motion.div>
@@ -40,17 +43,20 @@ const BrandStorySection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, delay: 0.15 }}
-          className="relative"
+          className="relative grid grid-cols-2 gap-3"
         >
           <img
-            src={craftsmanship}
-            alt="עבודת יד - יצירת תכשיטי כסף סילבנו"
+            src={crystals}
+            alt="שרשראות קריסטלים - כל אבן עם משמעות"
             loading="lazy"
-            width={800}
-            height={600}
-            className="w-full object-cover rounded-lg"
+            className="w-full object-cover rounded-lg aspect-[3/4]"
           />
-          <div className="absolute -bottom-4 -right-4 w-full h-full border border-silver-light rounded-lg -z-10" />
+          <img
+            src={lifestyleWoman}
+            alt="דוגמנית עם תכשיטי סילבנו"
+            loading="lazy"
+            className="w-full object-cover rounded-lg aspect-[3/4] mt-8"
+          />
         </motion.div>
       </div>
     </section>
