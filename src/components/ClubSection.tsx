@@ -12,29 +12,29 @@ const ClubSection = () => {
   };
 
   return (
-    <section id="club" className="py-24 px-6 bg-foreground text-primary-foreground">
-      <div className="max-w-xl mx-auto text-center">
+    <section id="club" className="py-28 px-6 bg-foreground">
+      <div className="max-w-lg mx-auto text-center">
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-gold-light tracking-[0.3em] text-sm font-body uppercase mb-4"
+          className="text-silver tracking-[0.4em] text-xs font-body uppercase mb-5"
         >
-          מועדון לקוחות
+          Members Club
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display text-4xl md:text-5xl font-light mb-6"
+          className="font-display text-4xl md:text-5xl font-light text-primary-foreground mb-6"
         >
-          הצטרפי ל<span className="text-gold-light italic">משפחה</span>
+          הצטרפי ל<span className="text-silver italic">מועדון</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-primary-foreground/70 font-body mb-10"
+          className="text-primary-foreground/50 font-body text-sm mb-12 leading-relaxed"
         >
           קבלי גישה ראשונה לקולקציות חדשות, מבצעים בלעדיים והפתעות מיוחדות
         </motion.p>
@@ -45,7 +45,7 @@ const ClubSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             onSubmit={handleSubmit}
-            className="space-y-4"
+            className="space-y-5"
           >
             <input
               type="text"
@@ -53,7 +53,7 @@ const ClubSection = () => {
               onChange={(e) => setName(e.target.value)}
               placeholder="השם שלך"
               required
-              className="w-full bg-transparent border-b border-primary-foreground/30 px-2 py-3 font-body text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-gold transition-colors"
+              className="w-full bg-transparent border-b border-primary-foreground/20 px-1 py-3.5 font-body text-sm text-primary-foreground placeholder:text-primary-foreground/30 focus:outline-none focus:border-silver transition-colors duration-300"
             />
             <input
               type="email"
@@ -61,23 +61,23 @@ const ClubSection = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="כתובת אימייל"
               required
-              className="w-full bg-transparent border-b border-primary-foreground/30 px-2 py-3 font-body text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-gold transition-colors"
+              className="w-full bg-transparent border-b border-primary-foreground/20 px-1 py-3.5 font-body text-sm text-primary-foreground placeholder:text-primary-foreground/30 focus:outline-none focus:border-silver transition-colors duration-300"
             />
             <button
               type="submit"
-              className="mt-6 w-full bg-gold-gradient text-primary-foreground py-4 font-body text-sm tracking-[0.2em] uppercase hover:shadow-gold transition-shadow duration-300"
+              className="mt-8 w-full bg-primary-foreground text-foreground py-4 rounded-lg font-body text-xs tracking-[0.25em] uppercase hover:bg-primary-foreground/90 transition-all duration-300"
             >
               הצטרפי עכשיו
             </button>
           </motion.form>
         ) : (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="py-8"
+            className="py-10"
           >
-            <p className="font-display text-2xl text-gold-light mb-2">תודה שהצטרפת! ✨</p>
-            <p className="text-primary-foreground/70 font-body">נשמח לראות אותך בדוכן שלנו בעזריאלי</p>
+            <p className="font-display text-2xl text-silver mb-3">תודה שהצטרפת ✦</p>
+            <p className="text-primary-foreground/50 font-body text-sm">נשמח לראות אותך בדוכן שלנו בעזריאלי</p>
           </motion.div>
         )}
       </div>

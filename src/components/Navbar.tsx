@@ -12,16 +12,16 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      initial={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.8 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-background/90 backdrop-blur-md shadow-soft" : "bg-transparent"
+        scrolled ? "bg-background/95 backdrop-blur-md shadow-soft" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="font-display text-2xl tracking-wider">
-          <span className={scrolled ? "text-foreground" : "text-primary-foreground"}>
+      <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <a href="#" className="font-display text-xl tracking-[0.15em]">
+          <span className={`transition-colors duration-300 ${scrolled ? "text-foreground" : "text-foreground"}`}>
             Silvano
           </span>
         </a>
@@ -35,8 +35,8 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className={`hidden md:block font-body text-sm tracking-wide transition-colors hover:text-gold ${
-                scrolled ? "text-foreground" : "text-primary-foreground"
+              className={`hidden md:block font-body text-xs tracking-wide transition-colors duration-300 hover:text-foreground ${
+                scrolled ? "text-muted-foreground" : "text-muted-foreground"
               }`}
             >
               {link.label}
@@ -44,7 +44,7 @@ const Navbar = () => {
           ))}
           <a
             href="#club"
-            className="font-body text-xs tracking-[0.15em] uppercase px-5 py-2 border border-gold text-gold hover:bg-gold hover:text-primary-foreground transition-all duration-300"
+            className="font-body text-[10px] tracking-[0.2em] uppercase px-5 py-2.5 rounded-lg bg-foreground text-primary-foreground hover:bg-foreground/85 transition-all duration-300"
           >
             מועדון
           </a>
