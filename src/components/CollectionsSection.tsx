@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import necklace from "@/assets/necklace.jpg";
+import productNecklace from "@/assets/product-necklace-display.jpg";
 import rings from "@/assets/rings.jpg";
 import bracelet from "@/assets/bracelet.jpg";
-import earrings from "@/assets/earrings.jpg";
+import earringsDisplay from "@/assets/earrings-display.jpg";
 
 const collections = [
-  { name: "שרשראות", image: necklace },
+  { name: "שרשראות", image: productNecklace },
   { name: "טבעות", image: rings },
   { name: "צמידים", image: bracelet },
-  { name: "עגילים", image: earrings },
+  { name: "עגילים", image: earringsDisplay },
 ];
 
 const CollectionsSection = () => {
@@ -47,8 +47,6 @@ const CollectionsSection = () => {
                   src={col.image}
                   alt={col.name}
                   loading="lazy"
-                  width={640}
-                  height={800}
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
               </div>

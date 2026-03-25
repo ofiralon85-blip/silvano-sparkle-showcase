@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import inspiration1 from "@/assets/inspiration1.jpg";
-import inspiration2 from "@/assets/inspiration2.jpg";
-import craftsmanship from "@/assets/craftsmanship.jpg";
+import lifestyleNecklaces from "@/assets/lifestyle-necklaces.jpg";
+import lifestyleMan from "@/assets/lifestyle-man.jpg";
+import lifestyleRings from "@/assets/lifestyle-rings.jpg";
+import productEarrings from "@/assets/product-earrings-stones.jpg";
 
 const InspirationSection = () => {
   return (
@@ -32,7 +33,7 @@ const InspirationSection = () => {
             transition={{ duration: 0.8 }}
             className="row-span-2 overflow-hidden rounded-lg"
           >
-            <img src={inspiration1} alt="תכשיטי כסף על משי" loading="lazy" width={640} height={800} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <img src={lifestyleNecklaces} alt="שרשראות כסף ואבני טורקיז" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -41,7 +42,7 @@ const InspirationSection = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="overflow-hidden rounded-lg"
           >
-            <img src={craftsmanship} alt="עבודת יד - יצירת תכשיטי כסף" loading="lazy" width={800} height={600} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <img src={productEarrings} alt="עגילים ושרשרת עץ החיים עם אבנים" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -50,7 +51,7 @@ const InspirationSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="row-span-2 overflow-hidden rounded-lg"
           >
-            <img src={inspiration2} alt="שרשראות כסף שכבות" loading="lazy" width={640} height={800} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            <img src={lifestyleMan} alt="שרשראות כסף לגבר" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -59,15 +60,7 @@ const InspirationSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="overflow-hidden rounded-lg"
           >
-            <div className="bg-secondary h-full flex items-center justify-center p-8 text-center min-h-[200px]">
-              <p className="font-display text-2xl md:text-3xl text-foreground font-light leading-relaxed">
-                ״כל פריט נוצר
-                <br />
-                <span className="text-silver-dark">בדייקנות</span>
-                <br />
-                ובאהבה״
-              </p>
-            </div>
+            <img src={lifestyleRings} alt="טבעות זהב על הידיים" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
           </motion.div>
         </div>
       </div>
