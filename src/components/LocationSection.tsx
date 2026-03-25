@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Clock, Phone } from "lucide-react";
-import booth from "@/assets/booth.jpg";
+
 
 const LocationSection = () => {
   return (
@@ -31,7 +31,7 @@ const LocationSection = () => {
           className="mb-16 overflow-hidden rounded-lg max-h-[400px]"
         >
           <img
-            src={booth}
+            src="/lovable-uploads/ac4ed136-8769-4a1e-960d-02d34507585a/lovable_image-1.png"
             alt="הדוכן של סילבנו תכשיטים בקניון עזריאלי"
             loading="lazy"
             className="w-full h-full object-cover object-center"
