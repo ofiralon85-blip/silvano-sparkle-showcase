@@ -1,6 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import crystals from "@/assets/crystals.jpg";
 import lifestyleWoman from "@/assets/lifestyle-woman.jpg";
 
 const BrandStorySection = () => {
@@ -77,7 +76,7 @@ const BrandStorySection = () => {
         <div className="relative grid grid-cols-2 gap-3">
           <motion.div className="overflow-hidden rounded-lg" style={{ y: imageY1 }}>
             <motion.img
-              src={crystals}
+              src="/lovable-uploads/4a386e40-06b1-4832-b280-476f908b9bc0/lovable_image-1.png"
               alt="שרשראות קריסטלים - כל אבן עם משמעות"
               loading="lazy"
               initial={{ opacity: 0, scale: 1.1 }}
