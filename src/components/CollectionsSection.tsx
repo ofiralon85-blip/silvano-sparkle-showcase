@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import productNecklace from "@/assets/product-necklace-display.jpg";
-import productEarrings from "@/assets/product-earrings-stones.jpg";
+import rings from "@/assets/rings.jpg";
 import bracelet from "@/assets/bracelet.jpg";
 import earringsDisplay from "@/assets/earrings-display.jpg";
 
 const collections = [
   { name: "שרשראות", image: productNecklace },
-  { name: "טבעות", image: bracelet },
+  { name: "טבעות", image: rings },
   { name: "צמידים", image: bracelet },
   { name: "עגילים", image: earringsDisplay },
 ];
