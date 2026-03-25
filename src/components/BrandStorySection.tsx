@@ -3,35 +3,34 @@ import craftsmanship from "@/assets/craftsmanship.jpg";
 
 const BrandStorySection = () => {
   return (
-    <section className="py-24 px-6">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+    <section className="py-28 px-6 bg-background">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 md:gap-24 items-center">
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.9 }}
         >
-          <p className="text-gold tracking-[0.3em] text-sm font-body uppercase mb-4">
-            הסיפור שלנו
+          <p className="text-silver-dark tracking-[0.4em] text-xs font-body uppercase mb-5">
+            Our Story
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-light text-foreground mb-8 leading-tight">
+          <h2 className="font-display text-4xl md:text-5xl font-light text-foreground mb-10 leading-[1.15]">
             עבודת יד עדינה,
             <br />
-            <span className="text-gold italic">אבנים עם משמעות</span>
+            <span className="text-silver-dark italic">כסף אמיתי</span>
           </h2>
-          <div className="space-y-5 text-muted-foreground font-body text-base leading-relaxed">
+          <div className="space-y-6 text-muted-foreground font-body text-sm leading-[1.9]">
             <p>
               סילבנו תכשיטים נולד מתוך אהבה עמוקה לאומנות ולעיצוב. כל תכשיט
-              שלנו נוצר בעבודת יד קפדנית, עם תשומת לב לכל פרט ופרט.
+              שלנו נוצר בעבודת יד קפדנית מכסף 925, עם תשומת לב לכל פרט ופרט.
             </p>
             <p>
-              אנחנו מאמינים שתכשיט הוא לא רק אקססורי — הוא סיפור אישי, סמל
-              של רגע, זיכרון או משמעות. כל אבן נבחרת בקפידה, כל עיצוב נולד
-              מתוך השראה אמיתית.
+              אנחנו מאמינים שתכשיט הוא לא רק אקססורי — הוא חלק מהזהות שלך.
+              כל עיצוב נולד מתוך השראה עירונית, מודרנית ועכשווית.
             </p>
             <p>
               בואי לגלות את הקולקציה שלנו בדוכן בקניון עזריאלי תל אביב,
-              ולמצוא את התכשיט שמדבר אלייך.
+              ולמצוא את הפריט שמדבר אלייך.
             </p>
           </div>
         </motion.div>
@@ -40,19 +39,18 @@ const BrandStorySection = () => {
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.9, delay: 0.15 }}
           className="relative"
         >
           <img
             src={craftsmanship}
-            alt="עבודת יד - יצירת תכשיטים סילבנו"
+            alt="עבודת יד - יצירת תכשיטי כסף סילבנו"
             loading="lazy"
             width={800}
             height={600}
-            className="w-full object-cover"
+            className="w-full object-cover rounded-lg"
           />
-          <div className="absolute -bottom-6 -right-6 w-32 h-32 border border-gold opacity-30" />
-          <div className="absolute -top-6 -left-6 w-32 h-32 border border-gold opacity-30" />
+          <div className="absolute -bottom-4 -right-4 w-full h-full border border-silver-light rounded-lg -z-10" />
         </motion.div>
       </div>
     </section>
