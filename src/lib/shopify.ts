@@ -1,15 +1,15 @@
 // Shopify Storefront API client
 // Connects the Lovable frontend to the Shopify backend
+//
+// Note: VITE_SHOPIFY_STOREFRONT_TOKEN is a PUBLIC token by design.
+// Storefront API tokens are meant to be exposed in the browser - they only
+// allow reading products and creating checkouts (no admin access).
+// See: https://shopify.dev/docs/api/usage/authentication
 
 const SHOPIFY_DOMAIN = import.meta.env.VITE_SHOPIFY_DOMAIN || "silvano-2109.myshopify.com";
-const STOREFRONT_ACCESS_TOKEN = import.meta.env.VITE_SHOPIFY_STOREFRONT_TOKEN || "";
+const STOREFRONT_ACCESS_TOKEN =
+  import.meta.env.VITE_SHOPIFY_STOREFRONT_TOKEN || "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";
 const API_VERSION = "2025-01";
-
-if (!STOREFRONT_ACCESS_TOKEN) {
-  console.warn(
-    "Missing VITE_SHOPIFY_STOREFRONT_TOKEN environment variable. Set it in your .env file or Lovable env settings."
-  );
-}
 
 const ENDPOINT = `https://${SHOPIFY_DOMAIN}/api/${API_VERSION}/graphql.json`;
 
