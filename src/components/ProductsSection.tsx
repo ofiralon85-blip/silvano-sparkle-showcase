@@ -101,11 +101,27 @@ const ProductsSection = () => {
         )}
 
         {products && products.length > 0 && (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-8">
-            {products.map((p, i) => (
-              <ProductCard key={p.id} product={p} index={i} />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-8">
+              {products.slice(0, 8).map((p, i) => (
+                <ProductCard key={p.id} product={p} index={i} />
+              ))}
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-center mt-16"
+            >
+              <Link
+                to="/catalog"
+                className="inline-flex items-center gap-2 px-10 py-4 border border-foreground/20 rounded-full text-sm tracking-[0.2em] uppercase text-foreground hover:bg-foreground hover:text-primary-foreground transition-all duration-300"
+              >
+                לכל המוצרים
+              </Link>
+            </motion.div>
+          </>
         )}
       </div>
     </section>
