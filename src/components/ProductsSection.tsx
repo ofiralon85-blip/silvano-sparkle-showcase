@@ -59,9 +59,9 @@ const ProductsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-silver-dark text-center tracking-[0.4em] text-xs font-body uppercase mb-5"
+          className="text-gold-dark text-center tracking-[0.4em] text-xs font-body uppercase mb-5"
         >
-          Collection
+          The Crystals
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -70,7 +70,7 @@ const ProductsSection = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-display text-4xl md:text-5xl text-center font-light text-foreground mb-6"
         >
-          שרשראות <span className="text-silver-dark italic">קריסטל</span>
+          מצאי את <span className="text-gold-dark italic">הקריסטל שלך</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -79,7 +79,8 @@ const ProductsSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-muted-foreground text-center max-w-lg mx-auto mb-20 leading-relaxed"
         >
-          כל קריסטל נושא משמעות, סיפור ואנרגיה ייחודית. בחרי את זו שמדברת אליך.
+          13 סוגי קריסטלים טבעיים, כל אחד עם משמעות ואנרגיה ייחודית.
+          זמין בשרשרת זהב או כסף, עם כרטיסיית משמעות.
         </motion.p>
 
         {isLoading && (

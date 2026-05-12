@@ -53,6 +53,12 @@ export default {
           dark: "hsl(var(--silver-dark))",
           metallic: "hsl(var(--silver-metallic))",
         },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
+          dark: "hsl(var(--gold-dark))",
+          metallic: "hsl(var(--gold-metallic))",
+        },
       },
       fontFamily: {
         display: ['Cormorant Garamond', 'serif'],

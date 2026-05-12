@@ -1,6 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import lifestyleWoman from "@/assets/lifestyle-woman.jpg";
+
+const CRYSTAL_IMG_1 = "https://cdn.shopify.com/s/files/1/0827/7278/7421/files/IMG_4377.jpg?v=1778514718";
+const CRYSTAL_IMG_2 = "https://cdn.shopify.com/s/files/1/0827/7278/7421/files/IMG_4378.jpg?v=1778514718";
 
 const BrandStorySection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -25,7 +27,7 @@ const BrandStorySection = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-silver-dark tracking-[0.4em] text-xs font-body uppercase mb-5"
+            className="text-gold-dark tracking-[0.4em] text-xs font-body uppercase mb-5"
           >
             Our Story
           </motion.p>
@@ -36,9 +38,9 @@ const BrandStorySection = () => {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="font-display text-4xl md:text-5xl font-light text-foreground mb-10 leading-[1.15]"
           >
-            עבודת יד עדינה,
+            אבנים טבעיות,
             <br />
-            <span className="text-silver-dark italic">אבנים עם משמעות</span>
+            <span className="text-gold-dark italic">אנרגיה שאת לובשת</span>
           </motion.h2>
           <div className="space-y-6 text-muted-foreground font-body text-sm leading-[1.9]">
             <motion.p
@@ -47,9 +49,9 @@ const BrandStorySection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              סילבנו תכשיטים נולד מתוך אהבה עמוקה לאומנות ולעיצוב. כל תכשיט
-              שלנו נוצר בעבודת יד קפדנית עם אבנים טבעיות — כל אבן נבחרה
-              בקפידה לפי המשמעות והאנרגיה שלה.
+              סילבנו נולד מתוך אהבה עמוקה לעולם הקריסטלים והאנרגיה שלהם.
+              אנחנו מאמינים שלכל אבן יש סיפור, משמעות ואנרגיה ייחודית —
+              וכשהיא נמצאת קרוב ללב, היא יכולה ללוות, לחזק ולהעצים.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -57,9 +59,9 @@ const BrandStorySection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              מאמתיסט לרוגע, טורקיז להגנה, אקוומרין לאומץ — אצלנו כל תכשיט
-              מגיע עם כרטיס משמעות אישי. לא סתם תכשיטים, אלא אנרגיה שאת
-              לובשת.
+              כל שרשרת מעוצבת בקפידה עם קריסטל טבעי, משובץ בשרשרת זהב או כסף
+              איכותית. לכל שרשרת מצורף <span className="text-foreground">כרטיס משמעות אישי</span> —
+              כי אנחנו מאמינים שהקשר לאבן מתחיל מהידע והכוונה.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -67,8 +69,8 @@ const BrandStorySection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.3 }}
             >
-              בואי לגלות את הקולקציה שלנו בדוכן בקניון עזריאלי תל אביב,
-              ולמצוא את האבן שמדברת אלייך.
+              13 סוגי קריסטלים שנבחרו בקפידה: אמתיסט, רוז קוורץ, אקוומרין,
+              סיטרין, ספיר ועוד — כל אחד עם המסר שלו, בשבילך.
             </motion.p>
           </div>
         </motion.div>
@@ -76,8 +78,8 @@ const BrandStorySection = () => {
         <div className="relative grid grid-cols-2 gap-3">
           <motion.div className="overflow-hidden rounded-lg" style={{ y: imageY1 }}>
             <motion.img
-              src="/lovable-uploads/4a386e40-06b1-4832-b280-476f908b9bc0/lovable_image-1.png"
-              alt="שרשראות קריסטלים - כל אבן עם משמעות"
+              src={CRYSTAL_IMG_1}
+              alt="שרשראות קריסטל בקולקציית זהב של סילבנו"
               loading="lazy"
               initial={{ opacity: 0, scale: 1.1 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -88,8 +90,8 @@ const BrandStorySection = () => {
           </motion.div>
           <motion.div className="overflow-hidden rounded-lg mt-12" style={{ y: imageY2 }}>
             <motion.img
-              src={lifestyleWoman}
-              alt="דוגמנית עם תכשיטי סילבנו"
+              src={CRYSTAL_IMG_2}
+              alt="קולקציית שרשראות קריסטל סילבנו"
               loading="lazy"
               initial={{ opacity: 0, scale: 1.1 }}
               whileInView={{ opacity: 1, scale: 1 }}
