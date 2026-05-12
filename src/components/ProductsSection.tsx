@@ -114,12 +114,9 @@ const ProductsSection = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-center mt-16"
             >
-              <Link
-                to="/catalog"
-                className="inline-flex items-center gap-2 px-10 py-4 border border-foreground/20 rounded-full text-sm tracking-[0.2em] uppercase text-foreground hover:bg-foreground hover:text-primary-foreground transition-all duration-300"
-              >
+              <span className="inline-flex items-center gap-2 px-10 py-4 border border-foreground/20 rounded-full text-sm tracking-[0.2em] uppercase text-foreground">
                 לכל המוצרים
-              </Link>
+              </span>
             </motion.div>
           </>
         )}
