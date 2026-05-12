@@ -70,7 +70,7 @@ const ProductsSection = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-display text-4xl md:text-5xl text-center font-light text-foreground mb-6"
         >
-          מצאי את <span className="text-gold-dark italic">הקריסטל שלך</span>
+          לבחירת <span className="italic">הקריסטל שלך</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -79,8 +79,9 @@ const ProductsSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-muted-foreground text-center max-w-lg mx-auto mb-20 leading-relaxed"
         >
-          13 סוגי קריסטלים טבעיים, כל אחד עם משמעות ואנרגיה ייחודית.
-          זמין בשרשרת זהב או כסף, עם כרטיסיית משמעות.
+          13 סוגי קריסטלים טבעיים, כל אחד עם משמעות ואנרגיה ייחודיים לו.
+          <br />
+          כל שרשרת זמינה בצבע זהב או כסף.
         </motion.p>
 
         {isLoading && (
