@@ -68,25 +68,6 @@ const LocationSection = () => {
             </p>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="mt-16 w-full h-72 md:h-80 overflow-hidden rounded-lg"
-        >
-          <iframe
-            src="https://www.google.com/maps?q=%D7%A7%D7%A0%D7%99%D7%95%D7%9F+%D7%A2%D7%96%D7%A8%D7%99%D7%90%D7%9C%D7%99+%D7%AA%D7%9C+%D7%90%D7%91%D7%99%D7%91&output=embed"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="מפה - סילבנו בקניון עזריאלי תל אביב"
-          />
-        </motion.div>
       </div>
     </section>
   );
