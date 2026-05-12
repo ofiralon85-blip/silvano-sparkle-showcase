@@ -38,6 +38,40 @@ const ProductPage = () => {
     v.selectedOptions.every((o) => selectedOptions[o.name] === o.value)
   );
 
+  // Auto-switch image when color (זהב/כסף) variant changes
+  useEffect(() => {
+    if (!product) return;
+    const colorOption = product.options.find(
+      (opt) => opt.name === "צבע" || opt.name === "Color" || opt.name === "צבע שרשרת"
+    );
+    if (!colorOption) return;
+    const selectedColor = selectedOptions[colorOption.name];
+    if (!selectedColor) return;
+
+    // Map Hebrew color to keyword to search in image URL/altText
+    const colorKeyword =
+      selectedColor === "זהב"
+        ? "gold"
+        : selectedColor === "כסף"
+        ? "silver"
+        : selectedColor.toLowerCase();
+
+    const matchIndex = product.images.findIndex((img) => {
+      const url = img.url.toLowerCase();
+      const alt = (img.altText ?? "").toLowerCase();
+      // Match against English keyword in URL, or Hebrew color in alt text
+      return (
+        url.includes(`-${colorKeyword}.`) ||
+        url.includes(`${colorKeyword}.`) ||
+        alt.includes(selectedColor)
+      );
+    });
+
+    if (matchIndex !== -1) {
+      setSelectedImage(matchIndex);
+    }
+  }, [selectedOptions, product]);
+
   const handleAddToCart = async () => {
     if (!selectedVariant) return;
     try {
