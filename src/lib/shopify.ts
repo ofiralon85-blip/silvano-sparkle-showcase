@@ -9,7 +9,7 @@
 const SHOPIFY_DOMAIN = import.meta.env.VITE_SHOPIFY_DOMAIN || "silvano-2109.myshopify.com";
 const STOREFRONT_ACCESS_TOKEN =
   import.meta.env.VITE_SHOPIFY_STOREFRONT_TOKEN || "a556c813920b7a53d0a640d640b46d58";
-const API_VERSION = "2025-01";
+const API_VERSION = "2026-04";
 
 const ENDPOINT = `https://${SHOPIFY_DOMAIN}/api/${API_VERSION}/graphql.json`;
 
